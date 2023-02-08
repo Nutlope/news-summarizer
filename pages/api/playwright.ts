@@ -5,7 +5,6 @@ import playwright from "playwright";
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const { url } = req;
-  console.log("Received request for", url, "processing");
   const browser = await playwright.chromium.launch({
     headless: true // setting this to true will not run the ui
   });

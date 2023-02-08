@@ -10,7 +10,6 @@ import SupportedSitesRewriter, {
 } from "../components/SupportedSitesRewriter";
 
 const isSupportedDomain = (url: string) => {
-  console.log("url", url);
   return supportedDomains.some((domain) => url.includes(domain));
 };
 
@@ -24,7 +23,6 @@ export const Home: NextPage = () => {
     async (optionalUrl?: string) => {
       setSummary("");
       const url = optionalUrl ?? curArticle;
-      console.log("url", url);
       if (!isSupportedDomain(url)) {
         toast.error("Please enter a valid article from a supported site");
         return;
