@@ -110,7 +110,7 @@ export const Home: NextPage = () => {
           article with AI
         </h1>
         <p className="mt-10 text-center text-lg text-gray-500 sm:text-2xl">
-          Copy and paste any <span className="text-green-500">TechCrunch </span>
+          Copy and paste any <span className="text-green-500">supported </span>
           article link below.
         </p>
         <input
