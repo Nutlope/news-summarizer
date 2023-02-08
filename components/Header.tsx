@@ -14,7 +14,7 @@ export default function Header() {
       >
         <Image src="/edit.png" alt="logo" width={34} height={34} />
         <h2 className={clsx("text-lg sm:text-3xl", poppins.className)}>
-          <span className="text-green-500">TechCrunch</span> summarizer
+          <span className="text-green-500">Article</span> summarizer
         </h2>
       </a>
       <a
