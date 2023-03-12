@@ -81,7 +81,7 @@ export const Home: NextPage = () => {
   return (
     <div className="mx-auto flex min-h-screen max-w-5xl flex-col pt-8 sm:pt-12">
       <Head>
-        <title>TechCrunch Summarizer</title>
+        <title>News Summarizer</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
@@ -89,22 +89,21 @@ export const Home: NextPage = () => {
         <a
           target="_blank"
           rel="noreferrer"
-          className="mx-auto mb-5 hidden max-w-fit rounded-full border border-gray-800 px-4 py-1 text-gray-500 transition duration-300 ease-in-out hover:scale-105 hover:border-gray-700 md:block"
+          className="mx-auto mb-5 hidden max-w-fit rounded-full border border-gray-800 px-4 py-1 text-gray-500 transition duration-300 ease-in-out hover:border-gray-700 md:block"
           href="https://twitter.com/nutlope/status/1622988173155368960"
         >
-          You can also go to a Techcrunch article and add "summary" after
-          "techcrunch" in the URL
+          See the launch on Twitter
         </a>
         <h1 className="max-w-5xl text-center text-4xl font-bold sm:text-7xl">
           Summarize any{" "}
           <span className="relative whitespace-nowrap text-[#3290EE]">
             <SquigglyLines />
-            <span className="relative text-green-500">TechCrunch</span>
+            <span className="relative text-green-500">News</span>
           </span>{" "}
           article with AI
         </h1>
         <p className="mt-10 text-center text-lg text-gray-500 sm:text-2xl">
-          Copy and paste any <span className="text-green-500">TechCrunch </span>
+          Copy and paste any <span className="text-green-500">News </span>
           article link below.
         </p>
         <input

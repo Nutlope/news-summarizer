@@ -1,5 +1,9 @@
+import { Redis } from "@upstash/redis";
+import { NextFetchEvent, NextRequest } from "next/server";
 import { parse } from "node-html-parser";
 import { OpenAIStream } from "../../utils/OpenAIStream";
+
+const redis = Redis.fromEnv();
 
 export const config = {
   runtime: "edge",
@@ -9,7 +13,7 @@ if (!process.env.OPENAI_API_KEY) {
   throw new Error("Missing env var from OpenAI");
 }
 
-export default async function handler(req: Request) {
+export default async function handler(req: NextRequest, event: NextFetchEvent) {
   const { url } = (await req.json()) as {
     url?: string;
   };
@@ -19,6 +23,11 @@ export default async function handler(req: Request) {
   }
 
   try {
+    const cached = await redis.get(url);
+    if (cached) {
+      return new Response(cached, { status: 200 });
+    }
+
     const response = await fetch(url, {
       method: "GET",
     });
@@ -46,6 +55,9 @@ export default async function handler(req: Request) {
     };
 
     const stream = await OpenAIStream(payload);
+    // Can we read this stream twice to get the final value to redis
+    // Can also make it into a stream
+    event.waitUntil(redis.set(url, stream, { ex: 2592000 })); // caches it for 30 days
     return new Response(stream);
   } catch (e: any) {
     console.log({ e });

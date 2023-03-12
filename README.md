@@ -1,14 +1,12 @@
-# [TechCrunchSummary.com](https://www.techcrunchsummary.com/)
+# [news-summarizer.vercel.app](https://news-summarizer.vercel.app/)
 
-This project summarizes TechCrunch articles for you using AI.
+This project summarizes news articles for you using AI.
 
-[![TechCrunch Summary Tool](./public/screenshot.png)](https://www.techcrunchsummary.com)
+[![News Summary Tool](./public/screenshot.png)](https://news-summarizer.vercel.app)
 
 ## How it works
 
-This project uses the [OpenAI GPT-3 API](https://openai.com/api/) (specifically, text-davinci-003) and [Vercel Edge functions](https://vercel.com/features/edge-functions) with streaming. It fetches the content on a Techcrunch article, sends it in a prompt to the GPT-3 API to summarize it via a Vercel Edge function, then streams the response back to the application.
-
-Video coming soon on how I built it from scratch!
+This project uses the [OpenAI GPT-3 API](https://openai.com/api/) (specifically, text-davinci-003) and [Vercel Edge functions](https://vercel.com/features/edge-functions) with streaming. It fetches the content on a article, sends it in a prompt to the GPT-3 API to summarize it via a Vercel Edge function, then streams the response back to the application.
 
 ## Saving costs
 
@@ -34,4 +32,4 @@ npm run dev
 
 Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=vercel-examples):
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Nutlope/news-summarizer&env=OPENAI_API_KEY&project-name=techcrunch-summarizer&repo-name=news-summarizer)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Nutlope/news-summarizer&env=OPENAI_API_KEY&project-name=news-summarizer&repo-name=news-summarizer)

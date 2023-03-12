@@ -10,11 +10,11 @@ export default function Header() {
     <div className="flex items-center justify-between px-3 sm:px-3">
       <a
         className="flex items-center space-x-3"
-        href="https://www.techcrunchsummary.com"
+        href="https://news-summarizer.vercel.app/"
       >
         <Image src="/edit.png" alt="logo" width={34} height={34} />
         <h2 className={clsx("text-lg sm:text-3xl", poppins.className)}>
-          <span className="text-green-500">TechCrunch</span> summarizer
+          <span className="text-green-500">News</span> summarizer
         </h2>
       </a>
       <a
