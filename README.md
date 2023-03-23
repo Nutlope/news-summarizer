@@ -4,7 +4,7 @@ This project summarizes news articles for you using AI.
 
 [![News Summary Tool](./public/screenshot.png)](https://news-summarizer.vercel.app)
 
-## How it works
+## How it works!
 
 This project uses the [OpenAI GPT-3 API](https://openai.com/api/) (specifically, text-davinci-003) and [Vercel Edge functions](https://vercel.com/features/edge-functions) with streaming. It fetches the content on a article, sends it in a prompt to the GPT-3 API to summarize it via a Vercel Edge function, then streams the response back to the application.
 
