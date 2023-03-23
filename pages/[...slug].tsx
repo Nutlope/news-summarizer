@@ -92,7 +92,7 @@ export const Home: NextPage = () => {
           className="mx-auto mb-5 hidden max-w-fit rounded-full border border-gray-800 px-4 py-1 text-gray-500 transition duration-300 ease-in-out hover:border-gray-700 md:block"
           href="https://twitter.com/nutlope/status/1622988173155368960"
         >
-          See the launch on Twitter
+          See the launch on LinkedIn
         </a>
         <h1 className="max-w-5xl text-center text-4xl font-bold sm:text-7xl">
           Summarize any{" "}
